@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
-	background: url(./background.jpg) no-repeat;
+	background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3)
+		no-repeat;
 	/* Keep the inherited background full size. */
 	background-attachment: fixed;
-
-	display: flex;
+	background-size: cover;
+	display: grid;
 	align-items: center;
 	justify-content: center;
-
 	height: 100vh;
-	font-family: 'Nunito', sans-serif;
 }
 
 .glass-box {
@@ -50,12 +55,12 @@ body {
 	margin: 0;
 }
 
-.icon {
-	font-size: 2rem;
-}
-
 .name {
 	font-size: 3.2rem;
 	font-weight: 600;
 	letter-spacing: 0.075rem;
+}
+
+.description {
+	font-weight: 400;
 }
