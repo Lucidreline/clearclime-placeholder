@@ -4,25 +4,35 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: Nunito;
 }
 
 body {
-	background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3)
-		no-repeat;
+	background: url(./background.jpg) no-repeat;
 	/* Keep the inherited background full size. */
+	background-position: 50% 90%;
 	background-attachment: fixed;
 	background-size: cover;
-	display: grid;
-	align-items: center;
-	justify-content: center;
 	height: 100vh;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	background: inherit;
+}
+
 .glass-box {
-	width: 40rem;
-	height: 20rem;
+	width: 60rem;
+	height: 25rem;
 	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 	z-index: 1;
 	background: inherit;
 	overflow: hidden;
@@ -41,7 +51,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0 0 2000px #29b8e444;
 	filter: blur(10px);
 	margin: -20px;
 }
@@ -50,17 +60,55 @@ body {
 	text-align: center;
 }
 
-.content h1.name,
-.content p {
-	margin: 0;
-}
-
 .name {
-	font-size: 3.2rem;
+	font-size: 5rem;
 	font-weight: 600;
-	letter-spacing: 0.075rem;
+	letter-spacing: 0.2rem;
+	margin-bottom: 0.5rem;
 }
 
 .description {
 	font-weight: 400;
+	font-size: 1rem;
+}
+
+.bottom-info {
+	height: 4rem;
+	width: 50rem;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 1250px) {
+	.glass-box,
+	.bottom-info {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.name {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.glass-box {
+		height: 20rem;
+	}
+	.name {
+		font-size: 2.8rem;
+		letter-spacing: 0.1rem;
+	}
+	.description {
+		font-size: 0.8rem;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.name {
+		font-size: 2rem;
+		letter-spacing: 0;
+	}
 }
