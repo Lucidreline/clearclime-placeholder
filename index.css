@@ -7,14 +7,16 @@
 	font-family: Nunito;
 }
 
+*::selection {
+	background: #29b8e444; /* WebKit/Blink Browsers */
+}
+*::-moz-selection {
+	background: #29b8e444; /* Gecko Browsers */
+}
+
 a {
 	text-decoration: none;
 	color: black;
-	transition: 0.3s ease;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 body {
@@ -129,6 +131,11 @@ hr {
 .follow-glass {
 	display: none;
 	font-size: 0.8rem;
+}
+
+.follow-bottom:hover,
+.follow-glass:hover {
+	text-decoration: underline;
 }
 
 .span-with-background {
