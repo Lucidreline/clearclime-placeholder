@@ -79,7 +79,8 @@ body {
 }
 
 hr {
-	border: rgba(0, 0, 0, 0.4) solid 1px;
+	border: rgba(0, 0, 0, 0.4) solid 0.5px;
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .description {
