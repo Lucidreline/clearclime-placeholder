@@ -19,6 +19,15 @@ a {
 	color: black;
 }
 
+.accent {
+	color: #2935e4ab;
+	font-weight: bold;
+}
+
+.accent:hover {
+	text-decoration: underline;
+}
+
 body {
 	background: url(./background.jpg) no-repeat;
 	/* Keep the inherited background full size. */
